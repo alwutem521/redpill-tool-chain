@@ -33,7 +33,11 @@ jobs:
             cache/*.pat
             docker/downloads/*.txz
           key: ${{matrix.platform}}-${{matrix.version}}-${{ hashFiles('global_config.json') }}
-
+          
+      - name: 扩展驱动
+        run: |
+          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/mpt3sas/rpext-index.json
+          
       - name: 准备构建环境
         run: |
           ./redpill_tool_chain.sh build ${{matrix.platform}}-${{matrix.version}}
