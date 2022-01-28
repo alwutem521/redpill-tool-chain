@@ -38,9 +38,9 @@ jobs:
         run: |
           ./redpill_tool_chain.sh build ${{matrix.platform}}-${{matrix.version}}
           
-      - name: 扩展驱动
+      - name: 扩展vmxnet3驱动
         run: |
-          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/mpt3sas/rpext-index.json
+          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/vmxnet3/releases/ds918p_42218.jsonn
           
       - name: 配置引导镜像
         run: |
