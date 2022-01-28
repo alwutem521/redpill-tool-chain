@@ -40,7 +40,7 @@ jobs:
           
       - name: 扩展vmxnet3驱动
         run: |
-          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/vmxnet3/releases/ds918p_42218.jsonn
+          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/vmxnet3/releases/ds918p_42218.json
           
       - name: 配置引导镜像
         run: |
